@@ -8,10 +8,10 @@ import user from "../data/user";
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar id={user.projects.id} />
       <Home username={user.name} city={user.city} color={user.color} />
       <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+      <ProjectList id={user.projects.id} technologies={user.projects.technologies} projects={user.projects} />
     </div>
   );
 }
